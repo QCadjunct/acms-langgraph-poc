@@ -1,0 +1,44 @@
+[project]
+name = "acms-langgraph-poc"
+version = "1.0.0"
+description = "DEC VAX ACMS architecture patterns applied to LangGraph agentic orchestration"
+authors = [
+    { name = "Peter Heller", email = "peter@mindovermetadata.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.7.0",
+    "pydantic-settings>=2.3.0",
+    "langgraph>=0.2.0",
+    "langchain-anthropic>=0.1.0",
+    "langchain-core>=0.2.0",
+    "langgraph-checkpoint-postgres>=0.1.0",
+    "asyncpg>=0.29.0",
+    "tavily-python>=0.3.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.4.0",
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments — use uv, not venv
+.venv/
+venv/
+env/
+
+# Environment variables — never commit credentials
+.env
+.env.local
+*.env
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# macOS
+.DS_Store
+
+# Workspace output — written at runtime, not committed
+/tmp/workspace_*.json
+
+# Ruff cache
+.ruff_cache/

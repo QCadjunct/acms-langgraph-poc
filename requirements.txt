@@ -1,0 +1,31 @@
+# ACMS Proof of Concept — Dependencies
+# Mind Over Metadata LLC — Peter Heller
+# Toolchain: Astral uv/uvx/Ruff — no pip, no conda
+#
+# Install: uv pip install -r requirements.txt
+# Lint:    uvx ruff check .
+# Format:  uvx ruff format .
+
+# ── Core ──────────────────────────────────────────────────────────────────────
+pydantic>=2.7.0
+pydantic-settings>=2.3.0
+
+# ── LangGraph + LangChain ─────────────────────────────────────────────────────
+langgraph>=0.2.0
+langchain-anthropic>=0.1.0
+langchain-core>=0.2.0
+langgraph-checkpoint-postgres>=0.1.0
+
+# ── Database ──────────────────────────────────────────────────────────────────
+asyncpg>=0.29.0
+
+# ── Search (optional — POC works without) ────────────────────────────────────
+tavily-python>=0.3.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+
+# ── Development ───────────────────────────────────────────────────────────────
+ruff>=0.4.0
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
